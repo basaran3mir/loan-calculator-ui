@@ -1,0 +1,33 @@
+<div class="container">
+  
+    <app-top-bar></app-top-bar>
+
+    <table class="table">
+        <thead>
+            <th>Başvuru ID</th>
+            <th>Müşteri ID</th>
+            <th>Banka Adı</th>
+            <th>Kredi Türü</th>
+            <th>Kredi Miktarı</th>
+            <th>Kredi Vadesi</th>
+            <th>Başvuru Tarihi</th>
+            <th>Onay</th>
+            <th>Detay</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let loanapp of loanApps">
+                <td>{{loanapp.appId}}</td>
+                <td>{{loanapp.customerID}}</td>
+                <td>{{loanapp.bankName}}</td>
+                <td>{{loanapp.type}}</td>
+                <td>{{loanapp.amount}}</td>
+                <td>{{loanapp.term}}</td>
+                <td>{{loanapp.appDate}}</td>
+                <td>{{loanapp.isItApproved}}</td>
+                <td><button type="button" id="showDetailsButton" (click)="showDetails(loanapp.appId!)">Detay</button> </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>

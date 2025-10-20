@@ -1,0 +1,24 @@
+<div class="container">
+
+    <!-- 
+    Am I Using Bootstrap:
+    <button type="button" class="btn btn-dark">Dark</button>
+     -->
+    <body>
+        <div class="login-container">
+            <div class="giriskayit">
+                <a [routerLink]="['/giris']" routerLinkActive="active" class="giristext">GİRİŞ YAP</a>
+                <a [routerLink]="['/kayitol']" routerLinkActive="active" class="kayittext">KAYIT OL</a>
+            </div>
+            <form class="login-form">
+                <label class="info-area">E-mail Adresi:</label>
+                <input class="input-area" type="text" id="telnum" name="telnum" placeholder="E-mail adresinizi giriniz." [(ngModel)]="email">
+
+                <label class="info-area">Şifre:</label>
+                <input class="input-area" type="password" id="password" name="password" placeholder="Şifrenizi giriniz." [(ngModel)]="password">
+
+                <button class="girisbuton" (click)="login()">Giriş Yap</button>
+            </form>
+        </div>
+    </body>
+</div>

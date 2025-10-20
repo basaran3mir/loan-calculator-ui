@@ -1,0 +1,95 @@
+.all-banks {
+    display: flex;
+    flex-direction: column;
+}
+
+.bank-element {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    font-size: 10px;
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: 5px;
+}
+
+.logo-side {
+    height: 160px;
+    width: 160px;
+}
+
+.info-side {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    height: 160px;
+    width: 200px;
+}
+
+.aboutside {
+    height: 160px;
+    width: 600px;
+}
+
+.banklogo {
+    height: 160px;
+    width: 160px;
+}
+
+.info-side p{
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bankname {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.bankpage, .bankcontact {
+    text-align: right;
+}
+
+.link-header {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+.tel, .web {
+    display: inline-block;
+    width: 100px;
+    color: rgb(255, 179, 0);
+}
+
+.becustomer {
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 10px;
+    background-color: rgb(255, 179, 0);
+    color: rgb(52,58,64);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.becustomer:hover {
+    background-color: rgb(52,58,64);
+    color: rgb(255, 179, 0);
+}
+
+.aboutheader {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+}
+
+.abouttext {
+    margin: 0px;
+    padding: 0px;
+}

@@ -1,0 +1,47 @@
+<div class="container">
+
+    <app-top-bar></app-top-bar>
+
+    <div class="application">
+        <table class="table">
+            <thead>
+                <th>Banka Seçimi</th>
+                <th>Kredi Türü Seçimi</th>
+                <th>Faiz Oranı</th>
+                <th>Kredi Tutarı</th>
+                <th>Kredi Vadesi</th>
+            </thead>
+            <tbody>
+                <td>{{selBankName}}</td>
+                <td>{{selType}}</td>
+                <td>{{resInterest}}</td>
+                <td>{{selAmount}}</td>
+                <td>{{selTerm}}</td>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="results">
+        <form class="result-form">
+            <label class="info-area">Aylık Taksit:</label>
+            <input class="input-area" id="installment" name="installment" type="text" placeholder=""
+                [value]="resInstallment" disabled>
+
+            <label class="info-area">Toplam Ödeme:</label>
+            <input class="input-area" id="totalpay" name="totalpay" type="text" placeholder="" [value]="resTotalPayment"
+                disabled>
+
+            <label class="info-area">Onay:</label>
+            <input class="input-area" id="confirm" name="confirm" type="text"
+                placeholder="Başvurmadan önce 'Onaylıyorum.' yazınız." [(ngModel)]="confirm">
+
+            <button class="krediHesaplaButon" id="krediHesaplaButon" name="krediHesaplaButon"
+                (click)="goBack()">Geri</button>
+
+            <button class="krediBasvurButon" id="krediBasvurButon" name="krediBasvurButon"
+                (click)="addLoanApp()">Krediye
+                Başvur</button>
+        </form>
+    </div>
+
+</div>

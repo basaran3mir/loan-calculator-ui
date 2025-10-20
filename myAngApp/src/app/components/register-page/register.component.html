@@ -1,0 +1,28 @@
+<div class="container">
+    <body>
+        <div class="login-container">
+            <div class="giriskayit">
+                <a [routerLink]="['/giris']" routerLinkActive="active" class="giristext">GİRİŞ YAP</a>
+                <a [routerLink]="['/kayitol']" routerLinkActive="active" class="kayittext">KAYIT OL</a>
+            </div>
+            <form class="login-form">
+                <label class="info-area">İsim Soyisim:</label>
+                <input class="input-area" type="text" id="name" name="name" placeholder="İsminizi giriniz." [(ngModel)]="nameSurname">
+
+                <label class="info-area">Telefon Numarası:</label>
+                <input class="input-area" type="text" id="phonenum" name="phonenum" placeholder="Telefon numaranızı giriniz.(10 haneli olmalıdır.)" [(ngModel)]="phoneNum">
+
+                <label class="info-area">E-mail Adresi:</label>
+                <input class="input-area" type="text" id="telnum" name="telnum" placeholder="E-mail adresinizi giriniz." [(ngModel)]="email">
+
+                <label class="info-area">Şifre:</label>
+                <input class="input-area" type="password" id="password" name="password" placeholder="Şifrenizi giriniz.(En az 8 haneli olmalıdır.)" [(ngModel)]="password">
+
+                <label class="info-area">Şifre Tekrar:</label>
+                <input class="input-area" type="password" id="password" name="password" placeholder="Şifrenizi tekrar giriniz." [(ngModel)]="passwordAgain">
+
+                <button class="kayitbuton" (click)="register()">Kayıt Ol</button>
+            </form>
+        </div>
+    </body>
+</div>

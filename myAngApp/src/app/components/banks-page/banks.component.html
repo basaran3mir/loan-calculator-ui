@@ -1,0 +1,34 @@
+<div class="container">
+
+    <app-top-bar></app-top-bar>
+
+    <div class="all-banks">
+        <div class="bank-element" *ngFor="let bank of bankArray">
+            
+            <div class="logo-side">
+                <p class=><img class="banklogo" src={{bank.bankImgSrc}} alt=""></p>
+            </div>
+
+            <div class="info-side">
+                <p class="bankname">{{bank.bankName}}</p>
+                <p class="bankpage">
+                    <span class="link-header">Web Sayfası:</span>
+                    <a class="web" href={{bank.bankHomePage}}>Sayfa</a>
+                </p>
+                <p class="bankcontact">
+                    <span class="link-header">İletişim:</span>
+                    <a class="tel" href="tel:{{bank.bankPhoneNum}}">{{bank.bankPhoneNum}}</a>
+                </p>
+                <p class="bankcustomerpage"><a href={{bank.bankBeCusPage}}><button class="becustomer">Müşteri
+                            Ol</button></a></p>
+            </div>
+
+            <div class="aboutside">
+                <p class="aboutheader">Hakkında</p>
+                <p class="abouttext">{{bank.bankAboutText}} <br> <br> Devamı: <a class="web" href={{bank.bankAboutPage}}>Hakkımızda</a> </p>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>

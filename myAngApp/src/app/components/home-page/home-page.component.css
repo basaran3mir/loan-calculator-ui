@@ -1,0 +1,29 @@
+
+.homeimgdiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.homeimgdiv img {
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.name-surname {
+    color: rgb(255, 179, 0);
+}
+
+.headertext {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /*color: rgb(255, 179, 0);*/
+    color: rgb(52,58,64);
+    margin-top: 40px;
+}
+
+.normaltext {
+    font-size: 15px;
+    margin-bottom: 40px;
+}

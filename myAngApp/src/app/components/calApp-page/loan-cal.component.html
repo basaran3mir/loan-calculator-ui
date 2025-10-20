@@ -1,0 +1,54 @@
+<div class="container">
+
+    <app-top-bar></app-top-bar>
+
+    <div class="application">
+        <form class="login-form">
+
+            <label class="info-area">Banka Seçimi:</label>
+            <select class="select-area" name="banks" id="banks" [(ngModel)]="selBankName"
+                (change)="select(selBankName, $event)">
+                <option disabled selected value="">Seçiniz.</option>
+                <option *ngFor="let bank of Banks">{{bank.bankName}}</option>
+            </select>
+
+            <label class="info-area">Kredi Türü Seçimi:</label>
+            <select class="select-area" name="types" id="types" [(ngModel)]="selType" (change)="select(selType,$event)">
+                <option disabled selected value>Seçiniz.</option>
+                <option *ngFor="let type of Types">{{type.typeName}}</option>
+            </select>
+
+            <label class="info-area">Faiz Oranı:</label>
+            <input class="input-area" id="interest" name="loanamount" type="text" placeholder="" disabled
+                value={{interestRate}}>
+
+            <label class="info-area">Kredi Tutarı:</label>
+            <input class="input-area" id="loanamount" name="loanamount" type="text"
+                placeholder="Kredi tutarını giriniz.(1000-1000000)" [(ngModel)]="selAmount">
+
+            <label class="info-area">Kredi Vadesi:</label>
+            <input class="input-area" id="loanterm" name="loanterm" type="text"
+                placeholder="Kredi vadesini giriniz.(1-36)" [(ngModel)]="selTerm">
+
+            <button class="krediHesaplaButon" id="krediHesaplaButon" name="krediHesaplaButon"
+                (click)="calculateAndGoApp()">Kredi Hesapla</button>
+
+        </form>
+    </div>
+
+    <div class="right-info">
+        <div class="right-info-title">
+            <p><label>Bankalar</label></p>
+        </div>
+        <div class="all-banks">
+            <div class="banks" *ngFor="let bank of Banks">{{bank.bankName}}</div>
+        </div>
+        <div class="right-info-title">
+            <p><label>Popüler Olan Aramalar</label></p>
+        </div>
+        <div class="all-populars">
+            <div class="populars" *ngFor="let popular of Populars">{{popular}}</div>
+        </div>
+    </div>
+
+</div>
