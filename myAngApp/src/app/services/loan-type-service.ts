@@ -10,7 +10,7 @@ import { LoanTypeDynamic } from '../models/loan-type-dynamic';
 })
 export class LoanTypeService {
 
-  private apiurl = "https://localhost:7008/api"
+  private apiurl = "https://localhost:7054/api"
   private url = "LoanType";
 
   constructor(private http: HttpClient) { }

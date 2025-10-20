@@ -10,7 +10,7 @@ import { BankDynamic } from '../models/bank-dynamic';
 })
 export class BankService {
 
-  private apiurl = "https://localhost:7008/api"
+  private apiurl = "https://localhost:7054/api"
   private url = "Bank";
 
   constructor(private http: HttpClient) { }

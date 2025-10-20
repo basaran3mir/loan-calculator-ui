@@ -9,7 +9,7 @@ import { Customer } from '../models/customer';
 })
 export class CustomerService {
 
-  private apiurl = "https://localhost:7008/api"
+  private apiurl = "https://localhost:7054/api"
   private url = "Customer";
 
   constructor(private http: HttpClient) { }
